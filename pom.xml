@@ -51,11 +51,27 @@
 		<plugins>
 			 <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version> <!-- Use an appropriate version that supports Java 17 -->
-            <configuration>
-                <release>17</release> <!-- This tells Maven to use Java 17 for compiling -->
-            </configuration>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>copy-webapp-runner</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy</goal>
+                    </goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.heroku</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>10.1.16.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                                <outputDirectory>${project.build.directory}/dependency</outputDirectory>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
         </plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
