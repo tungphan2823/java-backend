@@ -38,7 +38,7 @@ private static final long serialVersionUID = 1L;
 	}
 	
 	private void setAccessControlHeaders(HttpServletResponse res) {
-        res.addHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.addHeader("Access-Control-Allow-Origin", "https://student-manage-frontend-d4640fe47d34.herokuapp.com");
         res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         res.setHeader("Access-Control-Allow-Headers", "Content-Type");
         res.setHeader("Access-Control-Allow-Credentials", "true");
