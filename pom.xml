@@ -16,6 +16,13 @@
 
 	<dependencies>
 		<dependency>
+    <groupId>com.heroku</groupId>
+    <artifactId>webapp-runner</artifactId>
+    <version>9.0.41.0</version> <!-- This version may need to be changed to match Tomcat 10 -->
+    <scope>provided</scope>
+</dependency>
+
+		<dependency>
 			<groupId>jakarta.platform</groupId>
 			<artifactId>jakarta.jakartaee-api</artifactId>
 			<version>${jakartaee-api.version}</version>
