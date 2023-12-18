@@ -18,7 +18,7 @@
 		<dependency>
     <groupId>com.heroku</groupId>
     <artifactId>webapp-runner</artifactId>
-    <version>9.0.41.0</version> <!-- This version may need to be changed to match Tomcat 10 -->
+    <version>10.1.16.0</version> <!-- This version may need to be changed to match Tomcat 10 -->
     <scope>provided</scope>
 </dependency>
 
@@ -52,9 +52,9 @@
 			 <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version> 
+            <version>3.8.1</version> <!-- Use an appropriate version that supports Java 17 -->
             <configuration>
-                <release>17</release>
+                <release>17</release> <!-- This tells Maven to use Java 17 for compiling -->
             </configuration>
         </plugin>
 			<plugin>
