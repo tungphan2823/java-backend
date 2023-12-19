@@ -11,6 +11,8 @@
 		<jakartaee-api.version>10.0.0</jakartaee-api.version>
 		<compiler-plugin.version>3.11.0</compiler-plugin.version>
 		<war-plugin.version>3.3.2</war-plugin.version>
+		 <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 
@@ -37,6 +39,12 @@
   		  <groupId>org.postgresql</groupId>
    		 <artifactId>postgresql</artifactId>
    		 <version>42.2.5</version> <!-- Use the latest version available -->
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.7.0</version>
+		    <scope>test</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
